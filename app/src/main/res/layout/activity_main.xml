@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="">
+        android:layout_margin="5dp">
 
         <TextView
             android:id="@+id/textView"
@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="EMPLEADOS"
-            android:textSize="50dp"
+            android:textSize="30dp"
             android:gravity="center"
             android:textStyle="bold"/>
     </LinearLayout>
@@ -55,6 +55,7 @@
             android:ems="10"
             android:hint="Teléfono"
             android:inputType="phone"
+            android:maxLength="9"
             android:layout_margin="5dp"/>
 
         <LinearLayout
@@ -124,7 +125,7 @@
                 android:text="Con IVA"
                 android:layout_margin="5dp"
                 android:textSize="8dp"
-                />
+                android:onClick="clickIva"/>
         </LinearLayout>
 
         <LinearLayout
@@ -145,13 +146,16 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="numberSigned"
-                android:layout_margin="5dp"/>
+                android:layout_margin="5dp"
+                android:enabled="false"
+                android:text="0"/>
 
             <Button
                 android:id="@+id/btnMas"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:text="+"
+                android:onClick="clickMas"
                 android:layout_margin="5dp"/>
 
             <Button
@@ -159,23 +163,15 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:text="-"
+                android:onClick="clickMenos"
                 android:layout_margin="5dp"/>
         </LinearLayout>
-
-        <Button
-            android:id="@+id/btnCalcular"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Calcular"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingHorizontal="83dp">
+            >
 
             <TextView
                 android:id="@+id/textView6"
@@ -191,7 +187,24 @@
                 android:layout_margin="5dp"
                 android:ems="10"
                 android:inputType="numberDecimal" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:text="Ver"
+                android:onClick="clickVer"
+                android:layout_margin="5dp"/>
+
         </LinearLayout>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="General"
+        android:onClick="clickGeneral"
+        android:layout_margin="5dp"/>
 </LinearLayout>
