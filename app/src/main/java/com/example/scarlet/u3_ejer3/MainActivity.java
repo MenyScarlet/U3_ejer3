@@ -51,9 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 android.R.layout.simple_expandable_list_item_1, mes);
         spMes.setAdapter(adaptadorMes);
 
-        String [] year = {"", "2.000", "1.999", "1.998", "1.997", "1.996",
-                "1.995", "1.994", "1.993", "1.992", "1.991",
-                "1.990"};
+        String [] year = {"", "2018", "2017", "2016"};
         ArrayAdapter <String> adaptadorYear = new ArrayAdapter<String>(this,
                 android.R.layout.simple_expandable_list_item_1, year);
         spYear.setAdapter(adaptadorYear);
@@ -106,6 +104,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickVer (View view) {
+
+        //La combersion se puede hacer de dos formas, la primera es esta:
+        double sueldo = Double.parseDouble(etSueldo.getText().toString());
+        //y la segunda esta:
+        String cajaPrima = etPrima.getText().toString();
+        int prima = Integer.parseInt(cajaPrima);
+        //Cualquiera de las dos es valida
+        double total = sueldo + primas;
+
+        etTotal.setText(total+"");
 
     }
 
