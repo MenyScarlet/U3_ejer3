@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         String cajaPrima = etPrima.getText().toString();
         int prima = Integer.parseInt(cajaPrima);
         //Cualquiera de las dos es valida
-        double total = sueldo + primas;
+        double total = sueldo + prima;
 
         etTotal.setText(total+"");
 
